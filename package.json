@@ -1,0 +1,21 @@
+{
+  "private": false,
+  "name": "vue-track-reload",
+  "version": "0.0.1",
+  "description": "Track and perform actions if a user reloads too many times",
+  "author": "lsbyerley",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "vue serve src/track-reload.vue",
+    "build": "parcel build src/index.js"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.1.0",
+    "parcel-bundler": "^1.12.4",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
