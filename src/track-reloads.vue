@@ -1,5 +1,5 @@
 <template>
-  <div class='vtr-info'>
+  <div class='vtr-info' v-show="showInfo">
     <p class='count'>reloadCount: {{ reloadCount }}</p>
     <p class='max'>maxReloads: {{ maxReloads }}</p>
     <p class='message'>WarningMessage: {{ warningMessage }}</p>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'TrackReload',
+  name: 'TrackReloads',
   props: {
     maxReloads: {
       type: Number,
@@ -17,8 +17,12 @@ export default {
         return (typeof val === 'number' && val > 0)
       }
     },
-    maxReloadHandler: {
+    maxReloadsHandler: {
       type: Function
+    },
+    showInfo: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -29,7 +33,7 @@ export default {
   computed: {
     warningMessage() {
       if (this.reloadCount === 0) {
-        return `If this page is reloaded ${this.maxReloads} times, you will be kicked off.`
+        return `If this page is reloaded ${this.maxReloads} times, you will be kicked off!`
       } else if (this.maxReloads - this.reloadCount === 1) {
         return 'This is your final warning! Do not reload anymore.'
       } else {
@@ -65,14 +69,15 @@ export default {
     },
 
     handleThresholdReached() {
-      // Do something when threshold is reached, for now, just alert the user and reset
-      // alert('You\'ve reloaded enough! Resetting');
-      this.resetReloadCount();
-      
-      // If maxReloadHandler prop passed in, call it
-      if (this.maxReloadHandler) {
-        this.maxReloadHandler()
+      // Do something when threshold is reached, if no handler is passed in, alert is shown      
+      if (this.maxReloadsHandler) {
+        this.maxReloadsHandler()
+      } else {
+        alert('You\'ve reloaded too many times! Customize this by passing in your own maxReloadsHandler prop');
       }
+
+      // reset everything
+      this.resetReloadCount();
     },
 
     onReloadDetected() {
@@ -100,7 +105,5 @@ export default {
 </script>
 
 <style>
-.vtr-info {
-  display: none;
-}
+
 </style>

@@ -1,8 +1,8 @@
-import TrackReload from './track-reload'
+import TrackReloads from './track-reloads'
 
 export default {
   install(Vue, options) {
     // Register the component globally
-    Vue.component('vue-track-reload', TrackReload)
+    Vue.component('vue-track-reloads', TrackReloads)
   }
 }

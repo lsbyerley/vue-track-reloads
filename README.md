@@ -1,15 +1,14 @@
-# vue-track-reload
+# vue-track-reloads
 A vue component that tracks how many times a user reloads the page and will perform an action if a threshold is reached.
 
 ## Default import
-
 Install the component:
 
 ```javascript
 import Vue from 'vue'
-import TrackReload from 'vue-track-reload'
+import TrackReloads from 'vue-track-reloads'
 
-Vue.use(TrackReload)
+Vue.use(TrackReloads)
 ```
 
 ## Usage
@@ -17,7 +16,7 @@ After installing, simply use the component in your vue template
 
 ```html
 <template>
-  <vue-track-reload :maxReloads=5 :maxReloadHandler="myHandler" />
+  <vue-track-reloads :maxReloads=5 :maxReloadHandler="myHandler" :showInfo=false />
 </template>
 ```
 
@@ -28,6 +27,7 @@ You can make use of the following to customize.
 |----------|--------|-------------------------------------|----------|
 | maxReloads | Number | Number of max reloads allowed. | 3 |
 | maxReloadHandler | Function | Function to execute when max reloads are reached. | null |
+| showInfo | Boolean | Will display the replay count info in the dom. | true |
 
 
 ## Local Development
