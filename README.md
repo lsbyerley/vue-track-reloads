@@ -26,7 +26,7 @@ You can make use of the following to customize.
 | Property | Type   | Description                         | Default |
 |----------|--------|-------------------------------------|----------|
 | maxReloads | Number | Number of max reloads allowed. | 3 |
-| maxReloadsandler | Function | Function to execute when max reloads are reached. | null |
+| maxReloadsHandler | Function | Function to execute when max reloads are reached. | null |
 | showInfo | Boolean | Will display the replay count info in the dom. | true |
 
 
