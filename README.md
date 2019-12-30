@@ -16,7 +16,7 @@ After installing, simply use the component in your vue template
 
 ```html
 <template>
-  <vue-track-reloads :maxReloads=5 :maxReloadHandler="myHandler" :showInfo=false />
+  <vue-track-reloads :maxReloads=5 :maxReloadsHandler="myHandler" :showInfo=false />
 </template>
 ```
 
@@ -26,7 +26,7 @@ You can make use of the following to customize.
 | Property | Type   | Description                         | Default |
 |----------|--------|-------------------------------------|----------|
 | maxReloads | Number | Number of max reloads allowed. | 3 |
-| maxReloadHandler | Function | Function to execute when max reloads are reached. | null |
+| maxReloadsandler | Function | Function to execute when max reloads are reached. | null |
 | showInfo | Boolean | Will display the replay count info in the dom. | true |
 
 
