@@ -1,9 +1,18 @@
 # vue-track-reloads
 A vue component that tracks how many times a user reloads the page and will perform an action if a threshold is reached.
 
-## Default import
-Install the component:
+## Installation
+```bash
+yarn add vue-track-reloads
+```
 
+or with npm
+
+```
+npm install vue-track-reloads
+```
+
+## Default import
 ```javascript
 import Vue from 'vue'
 import TrackReloads from 'vue-track-reloads'
@@ -41,3 +50,6 @@ npm run dev
 ```
 npm run build
 ```
+
+## Credits
+The inspiration for this component came from [this article on CSSTricks](https://css-tricks.com/one-way-to-break-users-out-of-the-habit-of-reloading-too-much/) by Mateusz Rybczonek. While some of the functions are the same, I have also expanded on some of them and added my own.
