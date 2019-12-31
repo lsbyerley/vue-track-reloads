@@ -35,9 +35,10 @@ You can make use of the following to customize.
 | Property | Type   | Description                         | Default |
 |----------|--------|-------------------------------------|----------|
 | maxReloads | Number | Number of max reloads allowed. | 3 |
-| maxReloadsHandler | Function | Function to execute when max reloads are reached. | null |
-| showInfo | Boolean | Will display the replay count info in the dom. | true |
+| maxReloadsHandler | Function | Function to execute when max reloads are reached. | alert |
+| showInfo | Boolean | Will display the replay count info in the DOM. | true |
 
+> **Note:** if you choose to show the reload count info, I have not added any styles. However, I have added classes to the elements for you to easily style them.
 
 ## Local Development
 Clone the repo to your machine and change to the directory, then..
