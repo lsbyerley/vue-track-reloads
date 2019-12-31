@@ -4,6 +4,14 @@
   "version": "0.0.1",
   "description": "Track and perform actions if a user reloads too many times",
   "author": "lsbyerley",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/lsbyerley/vue-track-reloads.git"
+  },
+  "homepage": "https://github.com/lsbyerley/vue-track-reloads#readme",
+  "bugs": {
+    "url" : "https://github.com/lsbyerley/vue-track-reloads/issues"
+  },
   "license": "MIT",
   "main": "./dist/index.js",
   "scripts": {
