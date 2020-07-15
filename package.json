@@ -16,7 +16,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "dev": "vue serve src/track-reloads.vue --open",
-    "build": "parcel build src/index.js"
+    "build": "parcel build src/index.js",
+    "publish": "npm login; npm publish"
   },
   "files": [
     "dist/*"
